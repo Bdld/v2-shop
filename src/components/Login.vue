@@ -23,6 +23,7 @@
 </template>
 
 <script>
+// import { nameRule, passRule } from '../untils/valodate.js'
 export default {
   data () {
     return {
@@ -33,15 +34,8 @@ export default {
       },
       // 登录表单的验证规则对象
       loginFormRule: {
-        username: [
-          { required: true, message: '请输入登录名称', trigger: 'blur' },
-          { min: 3, max: 5, message: '长度在 3 到 5 个字符', trigger: 'blur' }
-        ],
-        password: [
-          { required: true, message: '请输入登录密码', trigger: 'blur' },
-          { min: 6, max: 8, message: '长度在 6 到 8 个字符', trigger: 'blur' }
-        ]
-
+        // username: [{ validator: nameRule, trigger: 'blur' }],
+        // password: [{ validator: passRule, trigger: 'blur' }]
       }
     }
   },
